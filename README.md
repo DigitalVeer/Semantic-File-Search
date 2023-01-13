@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://user-images.githubusercontent.com/8453348/212256916-83decdce-d373-41a5-87af-20a59a49e101.png" alt="Markdownify" width="120"></a>
+  <img src="https://user-images.githubusercontent.com/8453348/212256916-83decdce-d373-41a5-87af-20a59a49e101.png" alt="Markdownify" width="100"></a>
   <br>
   Semantic File Search
   <br>
