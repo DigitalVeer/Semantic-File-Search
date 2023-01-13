@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-user-drag: none;
+  user-select: none;
+  font-family: 'Inter';
+}
+
+/* // ::selection {
+//   background-color: #524949;
+// } */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% !important;
+  height: 100%;
+  background: initial !important;
+  overflow: hidden !important;
+}
+
+body {
+  margin: 0px;
+  height: -webkit-fill-available;
+  color: #fff !important;
+}
+
+#target {
+  height: -webkit-fill-available;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+}
+
+form.submitted input:invalid {
+  background: rgb(212, 76, 76);
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: #fff;
+}
+
+//////////////////////////////////////
+//     --- react-dropdown ---
+
+.Dropdown-root {
+  width: 100%;
+}
+
+.Dropdown-control {
+  background: #1e293b;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.7rem;
+  transition: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #1e293b;
+  }
+}
+
+.is-open .Dropdown-control {
+  border-bottom: solid 2px #60a5fa;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.Dropdown-menu {
+  background: #1e293b;
+  border: none;
+}
+
+.Dropdown-option {
+  color: #fff;
+  padding: 1.1rem;
+}
+
+.Dropdown-option:hover {
+  background: #2e3f5a;
+  color: #fff;
+}
+
+.Dropdown-option.is-selected {
+  background: #475569;
+  color: #fff;
+}
+
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent #60a5fa;
+}
+
+.dropdown-group {
+  width: 100%;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    color: #60a5fa;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    top: 0.4rem;
+    left: 1.1rem;
+  }
+}
+
+.MuiTooltip-tooltip {
+  background: #475569 !important;
+  font-size: 1rem !important;
+}
+
+.MuiTooltip-arrow {
+  color: #475569 !important;
+}

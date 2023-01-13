@@ -1,0 +1,54 @@
+.loadingModal {
+  width: 30rem;
+  height: 12rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__message {
+    font-size: 1.3rem;
+    color: #fff;
+    flex: 1;
+  }
+
+  &__spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    height: 3.2rem;
+    width: 5.5rem;
+    background: rgb(255, 86, 86);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgb(252, 57, 57);
+    }
+  }
+}

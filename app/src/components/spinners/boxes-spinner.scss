@@ -1,0 +1,100 @@
+/**
+ * These are the list of variables which can be overriden
+ *   e.g.
+ *     $spinnner-color: #fff;
+ *     @import <spinner>
+ */
+
+// Sets the color and the accent of the spinner
+$spinner-color: var(--color) !default;
+$spinner-accent: #71c585 !default;
+
+// Sets the size of the spinner
+$spinner-size: 15px !default;
+
+// Sets the height of the loader
+$loader-height: 3px !default;
+
+// Sets the speed of the loader
+$loader-speed: 2s !default;
+//////////////////////
+$speed2x: 2s;
+$speed3x: 1s;
+$speed4x: 0.5s;
+
+@mixin display-box($size) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.spinner {
+  @include display-box($spinner-size);
+  position: relative;
+
+  &__center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.spinner.boxes {
+  animation: rotate $speed3x ease-in-out infinite;
+
+  &::before {
+    @include display-box(calc($spinner-size / 2));
+    content: ' ';
+    background: $spinner-color;
+    position: absolute;
+    top: (calc($spinner-size / 8 * 2));
+    left: 0;
+    animation: boxes-animate-before $speed3x ease-in-out infinite;
+  }
+
+  &::after {
+    @include display-box(calc($spinner-size / 2));
+    content: ' ';
+    background: $spinner-color;
+    position: absolute;
+    top: (calc($spinner-size / 8 * 2));
+    right: 0;
+    animation: boxes-animate-after $speed3x ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes boxes-animate-before {
+  0% {
+    transform: translateX(-(calc($spinner-size / 2))) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-(calc($spinner-size / 6))) rotate(225deg);
+  }
+  100% {
+    transform: translateX(-(calc($spinner-size / 2))) rotate(45deg);
+  }
+}
+
+@keyframes boxes-animate-after {
+  0% {
+    transform: translateX(calc($spinner-size / 2)) rotate(45deg);
+  }
+  50% {
+    transform: translateX(calc($spinner-size / 6)) rotate(-225deg);
+  }
+  100% {
+    transform: translateX(calc($spinner-size / 2)) rotate(45deg);
+  }
+}

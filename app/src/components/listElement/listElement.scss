@@ -1,0 +1,14 @@
+.listElement {
+  height: 3.3rem;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+
+  &__grayed {
+    background: #eaeaea;
+  }
+}

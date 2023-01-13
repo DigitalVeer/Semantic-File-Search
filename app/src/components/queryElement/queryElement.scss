@@ -1,0 +1,49 @@
+.queryElement {
+  height: 7.5rem;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+
+  &__grayed {
+    background: #cccccc;
+  }
+
+  &__item {
+    width: 50%;
+    height: 100%;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: space-evenly;
+
+    div:first-child {
+      margin-bottom: 0.5rem;
+    }
+
+    &__path {
+      color: #0066ff;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &--text {
+      justify-content: flex-start;
+    }
+
+    &__content {
+      font-weight: 100;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
