@@ -18,18 +18,15 @@
 
 `Semantic File Search` enables one to upload files to a central database and semantically search through that database later. Each uploaded file is embedded as a vector, and query embeddings are compared against that vector.
 
-![output-onlinegiftools (1)](https://user-images.githubusercontent.com/8453348/139714463-4b7b2cca-5f42-4eed-b3c7-e3c1a95b9a7d.gif)
-
+![image](https://user-images.githubusercontent.com/8453348/212256609-3e307455-1bc0-432a-ae9d-e20eac5676ce.png)
+![image](https://user-images.githubusercontent.com/8453348/212256680-41fe85bf-de77-48a5-8b85-291ea56f6221.png)
 
 ## Credits
 
 This software uses the following open source packages:
 
-- [DiscordPy](https://discordpy.readthedocs.io/en/stable/)
+
 - [Python](https://www.python.org/downloads/)
-- [GSheets](https://github.com/xflr6/gsheets)
-- [pandas](https://pandas.pydata.org/)
-- [TDA Market Data](https://developer.tdameritrade.com/apis)
 
 ## License
 
