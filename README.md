@@ -19,7 +19,6 @@
 
 `Semantic File Search` enables one to upload files to a central database and semantically search through that database later. Each uploaded file is embedded as a vector, and query embeddings are compared against that vector.
 
-
 ## Upload Screen
 ![image](https://user-images.githubusercontent.com/8453348/212256609-3e307455-1bc0-432a-ae9d-e20eac5676ce.png)
 
@@ -28,10 +27,18 @@
 
 ## Credits
 
+
 This software uses the following open source packages:
 
-
 - [Python](https://www.python.org/downloads/)
+- [Sentence Transformers](https://www.sbert.net/)
+
+
+## Developers
+This was a joint effort by three developers.   
+[ @Veer Singh ](https://github.com/digitalveer)   
+[ @Bill Ray ](https://github.com/billray0259)   
+[ @Kamran Zolfanoon ](https://github.com/kamraz)   
 
 ## License
 
