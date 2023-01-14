@@ -7,7 +7,7 @@
 </h1>
 
 
-<h4 align="center">A semantic search engine built on top of <a href="https://www.sbert.net/" target="_blank">SBert</a>.</h4>
+<h4 align="center">A semantic search engine built on top of <a href="https://www.sbert.net/" target="_blank">SBERT</a>.</h4>
 
 
 <p align="center">
@@ -19,7 +19,11 @@
 
 `Semantic File Search` enables one to upload files to a central database and semantically search through that database later. Each uploaded file is embedded as a vector, and query embeddings are compared against that vector.
 
-## Upload Screen
+Upload Screen
+---
+
+The user has the ability to upload text files to the server. Currently, this supports `.txt`, `.pdf`, and `.word` documents. All files that are uploaded get stored on the server with a specified `batch id`. This same id can be used to query the server later. The server embeds all files uploaded into a GraphQL database.
+
 ![image](https://user-images.githubusercontent.com/8453348/212256609-3e307455-1bc0-432a-ae9d-e20eac5676ce.png)
 
 ## Query Screen
