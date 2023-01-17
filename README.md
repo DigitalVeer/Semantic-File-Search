@@ -10,12 +10,7 @@
 <h4 align="center">A semantic search engine built on top of <a href="https://www.sbert.net/" target="_blank">SBERT</a>.</h4>
 
 
-<p align="center">
-  <a href="https://badge.fury.io/py/discord.py">
-    <img src="https://badge.fury.io/py/discord.py.svg"
-         alt="Gitter">
-  </a>
-</p>
+
 
 `Semantic File Search` enables one to upload files to a central database and semantically search through that database later. Each uploaded file is embedded as a vector, and query embeddings are compared against that vector.
 
