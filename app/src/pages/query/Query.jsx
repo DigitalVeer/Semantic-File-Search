@@ -44,45 +44,6 @@ let data = [
   },
 ]
 
-let data2 = [
-  {
-    filepath: 'pwd/log-11-1-2022.txt',
-    text: 'User: Definitely the Westfield Mall. It has all of my favorite stores and the food court is amazing.',
-    similarity: 0.94,
-  },
-  {
-    filepath: 'pwd/log-11-1-2022.txt',
-    text: 'Suspect: Not much, just hanging out at home. How about you?',
-    similarity: 0.87,
-  },
-  {
-    filepath: 'pwd/log-08-17-2022.txt',
-    text: 'Suspect: Yeah, I\'m also a fan of the San Francisco Giants in baseball, and my favorite player is Buster Posey.',
-    similarity: 0.67,
-  },
-  {
-    filepath: 'pwd/log-08-17-2022.txt',
-    text: 'Suspect: Definitely. I\'m a huge fan of the Golden State Warriors, and my favorite player is Stephen Curry. How about you?',
-    similarity: 0.65,
-  },
-  {
-    filepath: 'pwd/log-11-1-2022.txt',
-    text: 'User: I just got back from the mall. It\'s my favorite place to shop.',
-    similarity: 0.44,
-  },
-  {
-    filepath: 'pwd/log-11-1-2022.txt',
-    text: 'User: It\'s about a 20 minute drive from where I live.',
-    similarity: 0.42,
-  },
-  {
-    filepath: 'pwd/log-11-1-2022.txt',
-    text: 'Suspect: I\'ve never been to that mall before. Is it far from here?',
-    similarity: 0.41,
-  },
-]
-
-
 
 const BatchOptions = [{ label: 'All Batches', value: 1 }]
 
@@ -107,27 +68,19 @@ const Query = () => {
     e.preventDefault()
     console.log(query, batchId)
     window.loading('Searching', 'Searching through files ...')
-
-
-    //wait 2 seconds
-    setTimeout(() => {
-     window.finishLoading()  
-     setResults(data2)
-    }, 2000);
-
-    // searchFiles(batchId, query)
-    //   .then((res) => {
-    //     console.log(res)
-    //     setResults(res.data.data)
-    //     // if (res.data.status === 'ok') setResults(res.data.data)
-    //     // else window.notify()
-    //   })
-    //   .catch((err) => {
-    //     console.log(err)
-    //     console.log("THERE IS AN ERROR!")
-    //     window.notify()
-    //   })
-    //   .finally(window.finishLoading)
+    searchFiles(batchId, query)
+      .then((res) => {
+        console.log(res)
+        setResults(res.data.data)
+        // if (res.data.status === 'ok') setResults(res.data.data)
+        // else window.notify()
+      })
+      .catch((err) => {
+        console.log(err)
+        console.log("THERE IS AN ERROR!")
+        window.notify()
+      })
+      .finally(window.finishLoading)
   }
   return (
     <form onSubmit={onSubmit} className='query'>
